@@ -2,13 +2,21 @@
 
 <h1>Howarts</h1>
 
-<div id="howarts">
-  <% @howarts.each do |howart| %>
-    <%= render howart %>
-    <p>
-      <%= link_to "Show this howart", howart %>
-    </p>
-  <% end %>
-</div>
+<%= link_to "Nueva Casa Howart", new_howart_path %>
 
-<%= link_to "New howart", new_howart_path %>
+<div id="howarts">
+  <table border="1" class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>LOCATION</th>
+        <th>HOUSE</th>
+        <th>Mostrar</th>
+      <tr>
+    </thead>
+    <% @howarts.each do |howart| %>
+      <%= render howart %>
+    <% end %>
+  </table>
+</div>
