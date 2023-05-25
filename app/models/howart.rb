@@ -1,0 +1,2 @@
+class Howart < ApplicationRecord
+end

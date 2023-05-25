@@ -1,0 +1,32 @@
+<%= form_with(model: howart) do |form| %>
+  <% if howart.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(howart.errors.count, "error") %> prohibited this howart from being saved:</h2>
+
+      <ul>
+        <% howart.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :house, style: "display: block" %>
+    <%= form.text_field :house %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

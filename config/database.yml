@@ -1,0 +1,30 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: Howarts_rails_development
+  username: postgres
+  password: tokepi70
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: Howarts_rails_test
+  username: postgres
+  password: tokepi70
+  host: localhost
+  port: 5432
+
+
+production:
+  <<: *default
+  database: Howarts_rails_production
+  username: Howarts_rails
+  password: <%= ENV["HOWARTS_RAILS_DATABASE_PASSWORD"] %>

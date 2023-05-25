@@ -1,0 +1,2 @@
+module HowartsHelper
+end

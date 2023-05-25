@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Howarts</h1>
+
+<div id="howarts">
+  <% @howarts.each do |howart| %>
+    <%= render howart %>
+    <p>
+      <%= link_to "Show this howart", howart %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New howart", new_howart_path %>

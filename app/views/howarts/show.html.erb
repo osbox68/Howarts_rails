@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @howart %>
+
+<div>
+  <%= link_to "Edit this howart", edit_howart_path(@howart) %> |
+  <%= link_to "Back to howarts", howarts_path %>
+
+  <%= button_to "Destroy this howart", @howart, method: :delete %>
+</div>
